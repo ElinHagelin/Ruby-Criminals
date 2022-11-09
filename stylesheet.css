@@ -1,0 +1,28 @@
+.grid-container > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  1fr 1fr;
+    box-shadow: 5px 10px #F2F2F2;
+
+
+}
+
+.grid > img{
+    /* padding: 1em; */
+    width: 10em;
+  
+  }
+  .client{
+    border: 1px solid lime;
+    max-width:40%
+   
+  
+  }
+
+  /* max-width:40%; 
+  display:block*/
+
+
+  #example2 {
+    border: 1px solid;
+    padding: 10px;
+  }
