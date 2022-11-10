@@ -5,55 +5,59 @@ body{
 
 
 .container{
-    width: 100vw;
-    height: 100vh;
-
-    font-size: 20px;
-
+   
     display: grid;
 
     grid-template-columns: 2fr repeat(8, 1fr) 2fr;
-grid-template-rows: 3fr repeat(7, 1fr) 3fr;
+grid-template-rows: 3fr repeat(8, 1fr) 3fr;
 
 gap:10px;
+
+
+
 
 
 }
 
 .container div{
-    border: 1px solid black;
+   
     padding: 10px;
 }
 
 .rubrik{
     grid-column: 2 / span 8;
     grid-row: 2 ;
+
+    font-size: 32px;
+    
 }
 
 .produktbild{
     grid-column: 3 / span 3 ;
     grid-row: 3 / span 6;
 
-    justify-self: center;
+    
 }
-
-
 
 
 .bild-1{
 grid-column: 2 ;
-grid-row: 3 / span 2 ;
-justify-self: center;
+grid-row: 3 / span 1 ;
+
+
+
 }
 
 .bild-2{
     grid-column: 2;
-    grid-row: 5 /span 2 ;
+    grid-row: 4 /span 1 ;
+    
 }
 
 .bild-3{
     grid-column: 2;
-    grid-row: 7 / span 2;
+    grid-row: 5 / span 1;
+   
 }
 
 
@@ -63,19 +67,92 @@ justify-self: center;
     grid-row: 3 / span 1;
 
     text-align: center;
+    font-size: 20px;
+
 }
 
-.colors{
+.container > .colors{
     grid-column: 7 / span 3;
-    grid-row: 4 / span 2;
+    grid-row: 3/ span 2;
+
+    font-size: 20px;
+   align-self: end;
+    text-align: center;
 }
 
 .info{
     grid-column: 7 / span 3;
-    grid-row: 6 / span 2;
+    grid-row: 4 / span 2;
+    align-self: end;
+    font-size: 20px;
 }
 
 .knapp{
     grid-column: 7 / span 3;
-    grid-row: 8 / span 1;
+    grid-row: 6 / span 1;
+    text-align: center;
+    
+    border-radius: 50px;
+    font-size: 20px;
+    
+    height: 40px;
+    width: 400px;
+    
+
+    color: white;
+    background: rgb(249,92,186);
+    background: linear-gradient(90deg, rgba(249,92,186,0.6786064767703957) 0%, rgba(82,0,255,0.6758053563222164) 100%);
 }
+
+span{
+    height: 3em;
+    width: 3em;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    justify-self: center;
+    
+}
+
+
+.svart-cirkel{
+    background-color: #0E0E10;
+}
+
+.vit-cirkel{
+    background-color: #ECECEE;
+}
+
+.rosa-cirkel{
+    background-color: #B38A8A;
+}
+
+
+@media (max-width:1270px) and (min-width:842px){
+    .bild-1{
+        grid-column: 3 ;
+    grid-row: 6 / span 1;
+        
+        
+        }
+        
+        .bild-2{
+            grid-column: 4 ;
+            grid-row: 6 / span 1;
+            
+        }
+        
+        .bild-3{
+            grid-column: 5;
+            grid-row: 6 / span 1;
+            
+        }
+}
+
+
+
+
+
+
+
+
