@@ -1,36 +1,32 @@
 
+*{ margin: 0;}
+
 
 .container{
     display: grid;
     height: 150vh;
     grid-template-columns: 1fr 1fr 0.5fr 2fr 2fr 1fr;
     grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr;
- 
-   
+
 }
- 
-.container > *{
-    border: 1px solid black;
-}
+
  
 nav{
     grid-row: 1;
     grid-column: 1 /7;
+    background-color: grey;
 }
  
 main{
     grid-row: 3/ span 3;
     grid-column: 3 / span 2;
-    text-align: center;
-    
-    
+    text-align: center;   
 }
  
 .rubrik{
     grid-row: 2;
     grid-column: 2 /6;
-
-    font-size: 20px;
+    font-size: 32px;
 }
  
 .sidebar1{
@@ -46,7 +42,7 @@ grid-column: 1;
 .produkt-bild1{
     grid-row: 3;
     grid-column: 2;
-    text-align: center;
+    text-align: center; 
 }
  
 .produkt-bild2{
@@ -64,7 +60,6 @@ grid-column: 1;
 .price{
     grid-row: 3;
     grid-column: 5;
-
     font-size: 20px;
     text-align: center;
 }
@@ -72,6 +67,30 @@ grid-column: 1;
 .colors{
     grid-row: 4;
     grid-column: 5;
+    text-align: center;
+}
+
+.cirkle {
+    height: 4em;
+    width: 4em;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+   
+} 
+
+
+
+.cirkle-black{
+    background-color: #0E0E10;
+}
+
+.cirkle-white{
+    background-color: #ECECEE;
+}
+
+.cirkle-pink{
+    background-color: #B38A8A;
 }
  
 .info{
@@ -84,23 +103,25 @@ grid-column: 1;
 .button{
     grid-row: 6;
     grid-column: 5;
-     
+   
+}
+
+.button1{
     border-radius: 50px;
     font-size: 20px;
-   
-   height: 50px;
+   height: 3em;
+   width: 12em;
    text-align: center;
-   
- 
+
     color: white;
     background: rgb(249,92,186);
     background: linear-gradient(90deg, rgba(249,92,186,0.6786064767703957) 0%, rgba(82,0,255,0.6758053563222164) 100%);
-
 }
  
 footer{
     grid-row: 7;
     grid-column: 1 / span 6;
+    background-color: grey;
 }
 
 
@@ -109,27 +130,21 @@ footer{
 
 
     .container{
-        display: grid;
-        height: 150vh;
         grid-template-columns: 1fr 1fr 0.5fr 2fr 2fr 1fr;
         grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
-     
-       
     }
 
     main{
         grid-row: 3/ span 4;
         grid-column: 3 / span 3;
-        text-align: center;
-        
-        
+        text-align: center;   
     }
      
     .rubrik{
         grid-row: 2;
         grid-column: 2 /6;
-    text-align: center;
-        font-size: 20px;
+        text-align: center;
+        font-size: 25px;
     }
      
     .sidebar1{
@@ -145,32 +160,27 @@ footer{
     .produkt-bild1{
         grid-row: 3;
         grid-column: 2;
-        text-align: center;
+        
     }
      
     .produkt-bild2{
         grid-row: 4;
         grid-column: 2;
-        text-align: center;
+        
     }
      
     .produkt-bild3{
         grid-row: 5;
         grid-column: 2;
-        text-align: center;
     }
      
     .price{
         grid-row: 7;
         grid-column: 2 /span 4;
-    
         font-size: 20px;
-        text-align: center;
     }
      
     .colors{
-       text-align: center;
-
         grid-row: 8;
         grid-column: 2 /span 4;
     }
@@ -179,24 +189,11 @@ footer{
         grid-row: 9;
         grid-column: 2 / span 4;
         font-size: 15px;
-        text-align: center;
     }
      
     .button{
         grid-row: 10;
         grid-column: 2 / span 4;
-         
-        border-radius: 50px;
-        font-size: 20px;
-       
-       height: 50px;
-       text-align: center;
-       
-     
-        color: white;
-        background: rgb(249,92,186);
-        background: linear-gradient(90deg, rgba(249,92,186,0.6786064767703957) 0%, rgba(82,0,255,0.6758053563222164) 100%);
-    
     }
 
     .sidebar1{
@@ -204,9 +201,9 @@ footer{
         grid-column: 1;
         }
          
-       .sidebar2{
-            grid-row: 2 / span 9;
-            grid-column: 6;
+    .sidebar2{
+         grid-row: 2 / span 9;
+         grid-column: 6;
         }
 
     footer{
@@ -220,36 +217,25 @@ footer{
 
 @media (max-width:591px){ 
 
-
     .container{
-        display: grid;
-        height: 150vh;
         grid-template-columns: 1fr 1fr 0.5fr 2fr 2fr 1fr;
         grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-     
-       
     }
 
     main{
         grid-row: 3/ span 4;
         grid-column: 2 / span 4;
-        text-align: center;
-        
-        
+        text-align: center; 
     }
-
-   
-     
     .rubrik{
         grid-row: 2;
         grid-column: 2 /6;
-    text-align: center;
-        font-size: 20px;
+        font-size: 25px;
     }
      
     .sidebar1{
-    grid-row: 2 / span 5;
-    grid-column: 1;
+        grid-row: 2 / span 5;
+        grid-column: 1;
     }
      
     .sidebar2{
@@ -260,32 +246,27 @@ footer{
     .produkt-bild1{
         grid-row: 7;
         grid-column: 3;
-        text-align: center;
+        
     }
      
     .produkt-bild2{
         grid-row: 7;
         grid-column: 4;
-        text-align: center;
+        
     }
      
     .produkt-bild3{
         grid-row: 7;
         grid-column: 5;
-        text-align: center;
+        
     }
      
     .price{
         grid-row: 8;
-        grid-column: 2 /span 4;
-    
-        font-size: 20px;
-        text-align: center;
+        grid-column: 2 /span 4; 
     }
      
     .colors{
-       text-align: center;
-
         grid-row: 9;
         grid-column: 2 /span 4;
     }
@@ -293,34 +274,20 @@ footer{
     .info{
         grid-row: 10;
         grid-column: 2 / span 4;
-        font-size: 15px;
-        text-align: center;
     }
      
     .button{
         grid-row: 11;
         grid-column: 2 / span 4;
-         
-        border-radius: 50px;
-        font-size: 20px;
-       
-       height: 50px;
-       text-align: center;
-       
-     
-        color: white;
-        background: rgb(249,92,186);
-        background: linear-gradient(90deg, rgba(249,92,186,0.6786064767703957) 0%, rgba(82,0,255,0.6758053563222164) 100%);
-    
     }
 
     .sidebar1{
-        grid-row: 2 / span 9;
+        grid-row: 2 / span 10;
         grid-column: 1;
         }
          
        .sidebar2{
-            grid-row: 2 / span 9;
+            grid-row: 2 / span 10;
             grid-column: 6;
         }
 
