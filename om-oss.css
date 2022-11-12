@@ -1,17 +1,17 @@
-/* 
+/* font-family: 'Ubuntu', sans-serif;
 font-family: 'Inter', sans-serif;
 font-family: 'Urbanist', sans-serif; */
 
 body{margin:0%; padding:0%;
      box-sizing: border-box;
     flex-wrap:wrap;
-    border: 3px solid red;
+  
     
 }
 
 .canon-pic{
-height:23em;
 box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+width: 30em;
 }
 
 .grid-container{ 
@@ -40,95 +40,115 @@ flex-wrap:wrap;}
 pre{   
     
     display:flex;
-    justify-content: center;
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Urbanist', sans-serif;
  padding-left: 1em;
 } 
 
-.second-section{border: 2px solid purple;
+.second-section{
     display:flex;
     flex-direction:column;
-    justify-content: center; 
+    justify-content: space-around; 
+    align-items: center;
+    /* border: 2px solid black; */
+    margin-top:2em;
 }
 
-.h2-text{ border: 6px solid black;
+.h2{ 
+  
     display:flex;
-    justify-content: center; 
-    font-size: 14px; 
-    font-family: 'Urbanist', sans-serif;
-
+    font-size: 19 px; 
+    font-family: 'Ubuntu', sans-serif;
+ 
 }
 
 .company{
     display:flex;   
+  margin-bottom: 4em;
 }
  
- .about-us{ border: 2px solid #5200FF;
+ .about-us{ 
+     /* border: 2px solid lime; */
     display:flex;
    flex-direction: column;
-    justify-content: space-around;
-
+    font-size: 19px; 
+justify-content: space-around;
     
   } 
 
 .photos {
+    /* border: 2px solid hotpink; */
     display:flex;
     flex-direction:column;
-    align-items:flex-end;
     justify-content: space-around;
-    width:8em;
-    border: 2px solid #5200FF;
-    height: 50vh;
-    justify-content: space-around;
+   
 
 } 
 
 .photo-elin{
-    width: 100px;
+    width: 130px;
 }
 .photo-pascal{
-    width: 100px;
+    width: 130px;
 }
 .photo-malin{
-    width: 100px;
+    width: 130px;
 }
-.btn{display: none;} 
+.btn{
+    display: none;
+padding: 0.5em 0.2em 0.5em 0.3em;
+margin-left: 10em;
+margin-right: 10em;
+align-items:flex-start;
+justify-content: flex-start;
+} 
+
+hr{
+  display:none;
+}
 
 
-
-
-@media (max-width:600px)
+@media (max-width:901px)
 {
     body {
        background-color: #f9f9f9;
        display:flex;
-       justify-content: center;}
-
+       justify-content: center;
+       background-color:lightseagreen;
+}
     .gray-rectangle{
         display:block;
     }
-    .btn{display:nond;}
+    .canon-pic{ width:511px; }
 
-    .canon-pic{
+pre{
+   
 
-    }
+}    
+
     .btn {
 
         background-image: linear-gradient(to right, #F95CBA 0%, #5200FF  60%, #B568ED 100%);
-        margin: 30px;
-        margin-left:3em;
-        padding: 10px 25px;
-        text-align: center;
+        /* margin: 50px; */
+        padding: 1em 3em;
         background-size: 200% auto;
         color: white;  
         font-size: 15px;          
         border-radius: 30px;
         border:none;
         display:block;
+        font-weight: bold;
+        margin-bottom: 1em;
     }
 
     hr{ 
-   display:none
+   display:block;
     }
+ }
+ @media (max-width:400px){
+ body{background-color: #B568ED;}
+
+    hr{ 
+        display:block;
+         }
  }
