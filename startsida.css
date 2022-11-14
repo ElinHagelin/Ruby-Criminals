@@ -5,60 +5,54 @@
 
 body {
 	min-height: 100vh;
-	width: 100vw;
-}
-
-.header {
-	grid-area: header;
-}
-
-.outer-grid {
 	display: grid;
-	width: 100vw;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 4fr 1fr;
+	grid-template-rows: 0.5fr 4fr 1fr;
 	grid-template-areas:
 		"header"
 		"main"
 		"footer";
 }
 
+header {
+	grid-area: header;
+}
+
 .inner-grid {
 	grid-area: main;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 0.5fr 3fr 1fr;
+	grid-template-rows: 0.5fr 3fr 1.5fr;
 	grid-template-areas:
 		"homepage-heading"
 		"hero-container"
 		"instructions";
 	row-gap: 3em;
 	max-height: 65em;
-	width: 100vw;
+	/* width: 100vw; */
+	padding: 2em 0;
 
 }
 
 .hero-container {
 	grid-area: hero-container;
+	position: relative;
 
 }
 
-.hero-container>* {
+.hero-container>img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	position: relative;
 }
 
 .homepage-heading {
-	background-color: #fedef1;
+	/* background-color: #fedef1; */
 	padding: 1em 1em;
 	text-align: center;
 	align-self: center;
 	justify-self: center;
-	/* min-width: 37em; */
 	max-width: 800em;
-	/* height: 10em; */
 	grid-area: homepage-heading;
 	display: flex;
 	flex-direction: column;
@@ -96,16 +90,23 @@ p>img {
 }
 
 .instructions>img {
-	height: 12em;
-	width: 12em;
+	height: 8em;
+	width: 8em;
 	position: absolute;
 	right: 0em;
-	top: 5em;
+	bottom: 0em;
+	/*
+	transform: translate(-10%); */
+	/* justify-self: center;
+	align-self: end; */
 }
 
 .button-inside {
 	grid-row: 3;
-
+	position: absolute;
+	bottom: 5em;
+	left: 50%;
+	transform: translate(-50%);
 }
 
 .button-inside,
@@ -120,19 +121,13 @@ p>img {
 	width: 10em;
 	transition: 0.5s;
 	box-shadow: 0 0 20px #838282;
-	/* position: absolute; */
-	/* bottom: 10em; */
-	/* display: inline; */
-	/* right: 0em; */
-	/* left: 50%;
-	transform: translate(-50%); */
 }
 
 .button-outside {
 	visibility: hidden;
 }
 
-.footer {
+footer {
 	grid-area: footer;
 }
 
@@ -140,7 +135,7 @@ p>img {
 
 	.inner-grid {
 		grid-template-columns: 0.5fr minmax(0, 40em) minmax(0, 40em) 0.5fr;
-		grid-template-rows: 1fr 1.5fr 1fr;
+		grid-template-rows: 1fr 1.5fr 0.5fr;
 		grid-template-areas:
 			". hero-container homepage-heading ."
 			". hero-container instructions ."
@@ -169,14 +164,16 @@ p>img {
 	}
 
 	.instructions>p {
-		font-size: 1.3em;
+		font-size: 1.2em;
 		margin: 0.5em;
 		justify-self: flex-end;
 	}
 
 	.instructions>img {
-		left: 20em;
-		top: 7em;
+		height: 10em;
+		width: 10em;
+		right: 0em;
+		bottom: 0em;
 	}
 
 	.button-inside {
@@ -214,8 +211,8 @@ p>img {
 
 	.inner-grid {
 
-		grid-template-columns: 0.5fr minmax(0, 65em) minmax(25em, 30em) 0.5fr;
-		grid-template-rows: 1fr 1.5fr 1fr;
+		grid-template-columns: 1fr minmax(0, 65em) minmax(25em, 30em) 1fr;
+		grid-template-rows: 1fr 1.5fr 0.5fr;
 		grid-template-areas:
 			". hero-container homepage-heading ."
 			". hero-container instructions ."
@@ -248,11 +245,13 @@ p>img {
 
 
 	.instructions>h2 {
-		font-size: 1.3em;
+		font-size: 1.4em;
 		justify-self: flex-end;
 	}
 
 	.instructions>img {
+		height: 12em;
+		width: 12em;
 		left: 20em;
 		top: 7em;
 	}
@@ -281,5 +280,4 @@ p>img {
 
 /* Saker som jag vill fixa:
 -stegen i instruktionerna är ej symmetriska.
--få till positionen på knappen när skärmen är mindre.
--att den stora bilden skalar bättre.*/
+-minska storleken på texten när skärmen är mindre än 500px*/
