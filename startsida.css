@@ -37,8 +37,6 @@ body {
 }
 
 .hero-container {
-	/* max-height: ;
-	min-width: 320px; */
 	grid-area: hero-container;
 
 }
@@ -55,7 +53,7 @@ body {
 	text-align: center;
 	align-self: center;
 	justify-self: center;
-	min-width: 37em;
+	/* min-width: 37em; */
 	max-width: 800em;
 	/* height: 10em; */
 	grid-area: homepage-heading;
@@ -75,7 +73,7 @@ body {
 	flex-direction: column;
 	grid-area: instructions;
 	position: relative;
-	min-width: 32em;
+	/* min-width: 32em; */
 	max-width: 70em;
 	padding-left: 1em;
 }
@@ -98,7 +96,7 @@ p>img {
 	height: 12em;
 	width: 12em;
 	position: absolute;
-	left: 23em;
+	right: 0em;
 	top: 5em;
 }
 
@@ -115,8 +113,13 @@ button {
 	transition: 0.5s;
 	box-shadow: 0 0 20px #838282;
 	position: absolute;
-	top: 23em;
-	left: 13em;
+	bottom: 10em;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.button-outside {
+	visibility: hidden;
 }
 
 .footer {
@@ -179,6 +182,7 @@ button {
 		justify-self: center;
 		align-self: flex-end;
 		position: static;
+		transform: unset;
 	}
 
 }
@@ -213,6 +217,11 @@ button {
 
 	}
 
+	.hero-container>img {
+		border-radius: 2em;
+
+	}
+
 	.homepage-heading {
 		background-color: #fedef1;
 		padding: 3em 1em;
@@ -229,10 +238,6 @@ button {
 		font-size: 1.7em;
 	}
 
-	.hero-container>img {
-		border-radius: 2em;
-
-	}
 
 	.instructions>h2 {
 		font-size: 1.3em;
@@ -252,6 +257,7 @@ button {
 		justify-self: center;
 		align-self: flex-end;
 		position: static;
+		transform: unset;
 	}
 
 	button:hover {
