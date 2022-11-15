@@ -7,7 +7,7 @@ body {
 	min-height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 0.5fr 4fr 1fr;
+	grid-template-rows: 0.3fr 4fr 1fr;
 	grid-template-areas:
 		"header"
 		"main"
@@ -28,9 +28,7 @@ header {
 		"hero-container"
 		"instructions";
 	row-gap: 3em;
-	max-height: 65em;
-	/* width: 100vw; */
-	padding: 2em 0;
+	padding-top: 2em;
 
 }
 
@@ -47,7 +45,6 @@ header {
 }
 
 .homepage-heading {
-	/* background-color: #fedef1; */
 	grid-area: homepage-heading;
 	display: flex;
 	padding: 1em 1em;
@@ -69,10 +66,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	grid-area: instructions;
-	position: relative;
-	/* min-width: 32em; */
 	max-width: 70em;
-	padding-left: 1em;
 }
 
 .instructions>h2 {
@@ -80,25 +74,38 @@ header {
 	margin: 0.5em;
 }
 
-.instructions>p {
+.instructions p {
 	font-size: 1em;
 	margin: 0.5em;
 }
 
-p>img {
-	margin-right: 1em;
+.steps-container {
+	display: flex;
+	position: relative;
+	min-height: 13em;
 }
 
-.instructions>img {
+.steps-container>img {
 	height: 8em;
 	width: 8em;
 	position: absolute;
 	right: 0em;
 	bottom: 0em;
-	/*
-	transform: translate(-10%); */
-	/* justify-self: center;
-	align-self: end; */
+}
+
+main .steps-icons,
+.steps-text {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: unset;
+
+}
+
+
+.steps-icons>img {
+	margin: 0.5em;
+	max-width: 1.5em;
+	max-height: 1.5em;
 }
 
 .button-inside {
@@ -117,10 +124,13 @@ p>img {
 	border-radius: 3em;
 	font-size: 1em;
 	color: white;
-	height: 2.5em;
-	width: 10em;
 	transition: 0.5s;
 	box-shadow: 0 0 20px #838282;
+}
+
+.button-inside {
+	height: 2.5em;
+	width: 10em;
 }
 
 .button-outside {
@@ -140,8 +150,18 @@ footer {
 		font-size: 1.3em;
 	}
 
-	.instructions>p {
+	.steps-text>p {
 		font-size: 1.2em;
+	}
+
+	.steps-icons>img {
+		max-width: 2em;
+		max-height: 2em;
+	}
+
+	.steps-container>img {
+		height: 10em;
+		width: 10em;
 	}
 }
 
@@ -155,13 +175,13 @@ footer {
 			". hero-container instructions ."
 			". hero-container button .";
 		gap: 3em;
+		padding-bottom: 2em;
 	}
 
 	.homepage-heading {
 		background-color: #fedef1;
 		padding: 3em 1em;
 		min-width: 30em;
-		max-width: 70em;
 		align-self: flex-start;
 	}
 
@@ -173,22 +193,26 @@ footer {
 		font-size: 1.6em;
 	}
 
+	.instructions {
+		min-width: 30em;
+	}
+
 	.instructions>h2 {
 		font-size: 1.3em;
-		justify-self: flex-end;
 	}
 
-	.instructions>p {
+	.steps-text>p {
 		font-size: 1.2em;
-		margin: 0.5em;
-		justify-self: flex-end;
 	}
 
-	.instructions>img {
-		height: 9em;
-		width: 9em;
-		right: 0em;
-		bottom: 0em;
+	.steps-icons>img {
+		max-width: 2em;
+		max-height: 2em;
+	}
+
+	.steps-container>img {
+		height: 11em;
+		width: 11em;
 	}
 
 	.button-inside {
@@ -196,33 +220,24 @@ footer {
 	}
 
 	.button-outside {
+		grid-area: button;
 		visibility: unset;
+		position: unset;
+		transform: unset;
 		font-size: 1.3em;
 		height: 2.8em;
 		width: 13em;
-		grid-area: button;
 		justify-self: center;
 		align-self: flex-end;
-		position: static;
-		transform: unset;
 	}
 
+	button:hover {
+		background-position: right center;
+		background-image: linear-gradient(to right, #7230FF 0%, #F95CBA 100%);
+	}
 }
 
-
-
-
 @media screen and (min-width:1201px) {
-
-	.outer-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 5fr 1fr;
-		grid-template-areas:
-			"header"
-			"main"
-			"footer";
-	}
 
 	.inner-grid {
 
@@ -233,7 +248,7 @@ footer {
 			". hero-container instructions ."
 			". hero-container button .";
 		gap: 3em;
-
+		padding-bottom: 2em;
 
 	}
 
@@ -245,9 +260,7 @@ footer {
 	.homepage-heading {
 		background-color: #fedef1;
 		padding: 3em 1em;
-		/* height: 10em; */
-		grid-area: homepage-heading;
-		min-width: 31em;
+		min-width: 33em;
 		align-self: flex-start;
 	}
 
@@ -258,18 +271,25 @@ footer {
 
 	.instructions>h2 {
 		font-size: 1.4em;
-		justify-self: flex-end;
 	}
 
-	.instructions>p {
+	.steps-container {
+		min-height: 15em;
+	}
+
+
+	.steps-text>p {
 		font-size: 1.2em;
 	}
 
-	.instructions>img {
+	.steps-icons>img {
+		max-width: 2em;
+		max-height: 2em;
+	}
+
+	.steps-container>img {
 		height: 12em;
 		width: 12em;
-		left: 20em;
-		top: 7em;
 	}
 
 	.button-inside {
@@ -277,15 +297,15 @@ footer {
 	}
 
 	.button-outside {
+		grid-area: button;
 		visibility: unset;
+		position: static;
+		transform: unset;
 		font-size: 1.5em;
 		height: 3em;
 		width: 15em;
-		grid-area: button;
 		justify-self: center;
 		align-self: flex-end;
-		position: static;
-		transform: unset;
 	}
 
 	button:hover {
@@ -293,7 +313,3 @@ footer {
 		background-image: linear-gradient(to right, #7230FF 0%, #F95CBA 100%);
 	}
 }
-
-/* Saker som jag vill fixa:
--stegen i instruktionerna är ej symmetriska.
--minska storleken på texten när skärmen är mindre än 500px*/
