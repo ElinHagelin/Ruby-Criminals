@@ -4,8 +4,7 @@
 }
 
 footer {
-	grid-column: 1/ span 3;
-	grid-row: 1 / span 2;
+	
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 0fr;
 	display: grid;
