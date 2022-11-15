@@ -8,8 +8,6 @@ body {
   padding: 0;
 }
 
-
-
 .header {
   display: flex;
   height: auto;
@@ -18,23 +16,17 @@ body {
   justify-content: space-between;
   font-family: 'Freehand', cursive;
   flex-wrap: wrap;
-
-
 }
 
 .icon {
   display: block;
 }
 
-
 .bi-list {
   display: none;
   height: 4em;
   margin-left: 1em;
   color: rgb(0, 0, 0);
-
-
-
 }
 
 .bi-cart3 {
@@ -42,7 +34,6 @@ body {
   height: 4em;
   margin-left: 1em;
   color: black;
-
 }
 
 .icon-mobile {
@@ -73,23 +64,18 @@ body {
 }
 
 .header>img {
-
   height: 4em;
   margin-left: 1em;
-
 }
 
 .cart-icon {
   height: 3em;
   margin-left: 2em;
-
-
 }
 
 @media (max-width:680px) {
   body {
     background-color: rgb(255, 255, 255);
-
   }
 
   .icon {
