@@ -16,12 +16,12 @@ body {
  
 header {
     grid-area: header;
-    background-color: aqua;
+   
 }
  
 footer {
     grid-area: footer;
-    background-color: aqua;
+   
 }
  
 main {
@@ -92,7 +92,9 @@ main {
     
 }
 .price > img{
-    width: 5em;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
 }
  
 .colors {
@@ -163,6 +165,11 @@ a {
     /* .color-circles {
         flex-direction: column;
     } */
+
+    .price > img{
+        width: 150px;
+        height: 100px;
+    }
 }
  
 @media screen and (min-width: 901px) {
@@ -184,6 +191,11 @@ a {
     .price {
         align-self: flex-end;
  
+    }
+    .price > img{
+        width: 150px;
+        height: 100px;
+        margin-top: 1em;
     }
 }
 
