@@ -22,6 +22,11 @@ body {
   display: block;
 }
 
+.header>.icon>img {
+  width: 14em;
+  height: 4em;
+}
+
 .bi-list {
   display: none;
   height: 4em;
@@ -46,6 +51,8 @@ body {
 }
 
 .flex-item {
+  text-decoration: none;
+  color: black;
   padding: 1em;
   align-items: center;
   height: 0.5em;
