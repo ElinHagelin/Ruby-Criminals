@@ -28,7 +28,7 @@ footer {
 main {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 2fr 1fr 0.5fr 1fr 1fr 1fr;
+	grid-template-rows: 2fr 1fr 0.5fr 0.5fr 1fr 1fr;
 	grid-template-areas:
 		"product-big"
 		"product-small"
@@ -49,7 +49,7 @@ main {
 main>.photos {
 	grid-area: product-small;
 	display: flex;
-	align-items: flex-end;
+	align-items: flex-start;
 	justify-content: center;
 
 }
@@ -59,6 +59,7 @@ main>.photos {
 }
 
 .container-photo>img {
+
 	max-width: 20em;
 	margin-top: 1em;
 }
@@ -68,12 +69,21 @@ main>.photos {
 .container-photo {
 	grid-area: product-big;
 	display: flex;
+	flex-direction: column;
 	/* flex-grow: 1; */
 	min-width: 300px;
 	text-align: center;
 	justify-content: center;
 	align-items: center;
+	margin-top: 2em;
+	
 }
+
+.container-photo-text{
+	font-size: 32px;
+}
+
+
 
 
 .side-info {
@@ -100,23 +110,33 @@ main>.photos {
 }
 
 
+
+
 .info {
 	grid-area: product-info;
 	margin-left: 1em;
 
 }
 
+.info > u:hover{
+	color: #F95CBA ;
+}
+
 .color-circles {
 	display: flex;
 }
 
-.color-circles>div {
+.color-circles>div,  .color-circles>input{
 	margin: 1em 0.5em;
 	height: 3em;
 	width: 3em;
 	border: 1px solid black;
 	border-radius: 50%;
 	justify-self: center;
+}
+
+.color-circles>input:focus {
+	border: 2px solid #F95CBA ;
 }
 
 .svart-cirkel {
@@ -150,10 +170,7 @@ main>.photos {
     box-shadow: 0 0 20px #838282;
 }
 
-.button:hover {
-	background-position: right center;
-	background-image: linear-gradient(to right, #7230FF 0%, #F95CBA 100%);
-}
+
 
 .button > a{
 	color: white;
@@ -213,5 +230,10 @@ main>.photos {
 	.price {
 		align-self: flex-end;
 
+	}
+
+	.button:hover {
+		background-position: right center;
+		background-image: linear-gradient(to right, #7230FF 100%, #F95CBA 0%);
 	}
 }
