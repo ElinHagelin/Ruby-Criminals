@@ -1,0 +1,324 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Urbanist', sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.3fr 4fr 1fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+header {
+	grid-area: header;
+}
+
+.inner-grid {
+	grid-area: main;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.5fr 3fr 1.5fr;
+	grid-template-areas:
+		"homepage-heading"
+		"hero-container"
+		"instructions";
+	row-gap: 3em;
+	padding-top: 2em;
+
+}
+
+.hero-container {
+	grid-area: hero-container;
+	position: relative;
+
+}
+
+.hero-container>img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.homepage-heading {
+	grid-area: homepage-heading;
+	display: flex;
+	padding: 1em 1em;
+	text-align: center;
+	align-self: center;
+	justify-self: center;
+	max-width: 70em;
+	flex-direction: column;
+	border-radius: 2em;
+}
+
+
+.homepage-heading>h1 {
+	font-size: 1.25em;
+}
+
+.instructions {
+	justify-self: center;
+	display: flex;
+	flex-direction: column;
+	grid-area: instructions;
+	max-width: 70em;
+}
+
+.instructions>h2 {
+	font-size: 1.1em;
+	margin: 0.5em;
+}
+
+.instructions p {
+	font-size: 1em;
+	margin: 0.5em;
+}
+
+.steps-container {
+	display: flex;
+	position: relative;
+	min-height: 100%;
+}
+
+.steps-container>img {
+	height: 10em;
+	width: 10em;
+	position: absolute;
+	right: 0em;
+	bottom: 0em;
+}
+
+.steps-icons,
+.steps-text {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: unset;
+}
+
+.steps-icons>img {
+	margin: 0.5em;
+	max-width: 1.5em;
+	max-height: 1.5em;
+}
+
+.button-inside {
+	grid-row: 3;
+	position: absolute;
+	bottom: 3em;
+	left: 50%;
+	transform: translate(-50%);
+	height: 3em;
+	width: 13em;
+	font-size: 1.2em;
+}
+
+.button-inside,
+.button-outside {
+	background-image: linear-gradient(to left, #7230FF 0%, #F95CBA 100%);
+	opacity: 0.8;
+	border-style: none;
+	border-radius: 3em;
+	transition: 0.5s;
+	box-shadow: 0 0 20px #838282;
+}
+
+a {
+	color: white;
+	text-decoration: unset;
+}
+
+.button-outside {
+	visibility: hidden;
+}
+
+button {
+	font-family: 'Inter', sans-serif;
+}
+
+footer {
+	grid-area: footer;
+}
+
+@media screen and (min-width:515px) and (max-width:1000px) {
+	.homepage-heading>h1 {
+		font-size: 1.6em;
+	}
+
+	.instructions>h2 {
+		font-size: 1.3em;
+	}
+
+	.steps-text>p {
+		font-size: 1.2em;
+	}
+
+	.steps-icons>img {
+		max-width: 2em;
+		max-height: 2em;
+	}
+
+	.steps-container>img {
+		height: 10em;
+		width: 10em;
+	}
+}
+
+@media screen and (min-width:1001px) and (max-width:1200px) {
+
+	.inner-grid {
+		grid-template-columns: 0.5fr minmax(0, 40em) minmax(0, 40em) 0.5fr;
+		grid-template-rows: 1fr 1.5fr 0.5fr;
+		grid-template-areas:
+			". hero-container homepage-heading ."
+			". hero-container instructions ."
+			". hero-container button .";
+		gap: 3em;
+		padding-bottom: 2em;
+	}
+
+	.homepage-heading {
+		background-color: #fedef1;
+		padding: 3em 1em;
+		min-width: 30em;
+		align-self: flex-start;
+	}
+
+	.hero-container>img {
+		border-radius: 2em;
+	}
+
+	.homepage-heading>h1 {
+		font-size: 1.6em;
+	}
+
+	.instructions {
+		min-width: 30em;
+	}
+
+	.instructions>h2 {
+		font-size: 1.3em;
+	}
+
+	.steps-text>p {
+		font-size: 1.2em;
+	}
+
+	.steps-icons>img {
+		max-width: 2em;
+		max-height: 2em;
+	}
+
+	.steps-container>img {
+		height: 12em;
+		width: 12em;
+	}
+
+	.button-inside {
+		visibility: hidden;
+	}
+
+	.button-outside {
+		grid-area: button;
+		visibility: unset;
+		position: unset;
+		transform: unset;
+		font-size: 1.5em;
+		height: 3em;
+		width: 15em;
+		justify-self: center;
+		align-self: flex-end;
+	}
+
+	.button-outside>button {
+		width: 100%;
+		height: 100%;
+		font-size: 1.1em;
+	}
+
+	button:hover {
+		background-position: right center;
+		background-image: linear-gradient(to right, #7230FF 0%, #F95CBA 100%);
+	}
+}
+
+@media screen and (min-width:1201px) {
+
+	.inner-grid {
+
+		grid-template-columns: 1fr minmax(0, 60em) minmax(25em, 35em) 1fr;
+		grid-template-rows: 1fr 1.5fr 0.5fr;
+		grid-template-areas:
+			". hero-container homepage-heading ."
+			". hero-container instructions ."
+			". hero-container button .";
+		gap: 3em;
+		padding-bottom: 2em;
+	}
+
+	.hero-container>img {
+		border-radius: 2em;
+
+	}
+
+	.homepage-heading {
+		background-color: #fedef1;
+		padding: 3em 1em;
+		min-width: 33em;
+		align-self: flex-start;
+	}
+
+	.homepage-heading>h1 {
+		font-size: 1.7em;
+	}
+
+	.instructions>h2 {
+		font-size: 1.4em;
+	}
+
+	.steps-text>p {
+		font-size: 1.2em;
+	}
+
+	.steps-icons>img {
+		max-width: 2em;
+		max-height: 2em;
+	}
+
+	.steps-container>img {
+		height: 12em;
+		width: 12em;
+	}
+
+	.button-inside {
+		visibility: hidden;
+	}
+
+	.button-outside {
+		grid-area: button;
+		visibility: unset;
+		position: static;
+		transform: unset;
+		font-size: 1.5em;
+		height: 3em;
+		width: 15em;
+		justify-self: center;
+		align-self: flex-end;
+	}
+
+	.button-outside>button {
+		width: 100%;
+		height: 100%;
+		font-size: 1.2em;
+	}
+
+	button:hover {
+		background-position: right center;
+		background-image: linear-gradient(to right, #7230FF 0%, #F95CBA 100%);
+	}
+}
