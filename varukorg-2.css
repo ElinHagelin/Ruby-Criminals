@@ -28,11 +28,12 @@
 
 .cart {
 	display: none;
+	background-color: white;
 	flex-direction: column;
 	position: absolute;
 	width: 20em;
 	height: 40em;
-	top: 5.7em;
+	top: 4.6em;
 	right: -21em;
 	transform-origin: 0% 0%;
 	transform: translate(-100%, 0);
@@ -40,6 +41,7 @@
 	justify-content: space-around;
 	box-shadow: 0 0 10px #838282;
 	border-radius: 0 0 0 2em;
+	z-index: 1;
 }
 
 .cart-toggle input:checked~.cart {
@@ -90,8 +92,8 @@
 
 .cart-info>img {
 	padding-right: 1.5em;
-	width: 2.5em;
-	height: 2.5em;
+	width: 3.5em;
+	height: 2em;
 }
 
 .amount {
