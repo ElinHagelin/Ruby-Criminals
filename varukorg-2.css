@@ -22,14 +22,12 @@
 }
 
 .cart-icon {
-	position: relative;
-	border-radius: 3px;
-	z-index: 1;
-	transform-origin: 4px 0px;
+	height: 3em;
+	margin-left: 0.5em;
 }
 
 .cart {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	position: absolute;
 	width: 20em;
@@ -42,6 +40,10 @@
 	justify-content: space-around;
 	box-shadow: 0 0 10px #838282;
 	border-radius: 0 0 0 2em;
+}
+
+.cart-toggle input:checked~.cart {
+	display: flex;
 }
 
 .cart>h1 {
@@ -90,10 +92,6 @@
 	padding-right: 1.5em;
 	width: 2.5em;
 	height: 2.5em;
-}
-
-.cart-toggle input:checked~.cart {
-	transform: none;
 }
 
 .amount {
