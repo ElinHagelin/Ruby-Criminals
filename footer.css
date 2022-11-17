@@ -33,7 +33,14 @@ footer hr {
 .icons>img {
 	margin: 0.5em;
 	width: 50px;
+	cursor: pointer;
 }
+
+/* .öppettider,
+.icons-container,
+.Kontakta-oss {
+	justify-self: center;
+} */
 
 
 

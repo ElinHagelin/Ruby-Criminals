@@ -58,6 +58,7 @@
 	height: 1px;
 	width: 15em;
 	border: none;
+	display: block;
 }
 
 .cart-info-container {
@@ -91,9 +92,8 @@
 }
 
 .cart-info>img {
-	padding-right: 1.5em;
-	width: 3.5em;
-	height: 2em;
+	width: 40px;
+	height: 40px;
 }
 
 .amount {
@@ -127,9 +127,11 @@
 	color: white;
 	text-decoration: none;
 	font-size: 1.5em;
+	font-family: 'Inter', sans-serif;
 }
 
 .button-cart:hover {
+	transition: 0.5s;
 	background-position: right center;
-	background-image: linear-gradient(to right, #7230FF 0%, #F95CBA 100%);
+	background: linear-gradient(to left, #7230FF 100%, #F95CBA 0%);
 }

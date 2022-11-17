@@ -17,42 +17,30 @@ body {
 
 header {
 	grid-area: header;
-
 }
 
 footer {
 	grid-area: footer;
-
 }
 
 main {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 2fr 1fr 0.5fr 0.5fr 1fr 1fr minmax(0.5fr, 3fr);
+	grid-template-rows: 2fr 1fr 2fr 1fr minmax(0.5fr, 3fr);
 	grid-template-areas:
 		"product-big"
 		"product-small"
-		"price"
-		"colors"
-		"product-info"
+		"side-info"
 		"button"
 		"specification";
+	gap: 2em;
 }
-
-/* main {
-
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-} */
-
 
 main>.photos {
 	grid-area: product-small;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
-
 }
 
 .photos>img {
@@ -60,12 +48,9 @@ main>.photos {
 }
 
 .container-photo>img {
-
 	max-width: 20em;
 	margin-top: 1em;
 }
-
-
 
 .container-photo {
 	grid-area: product-big;
@@ -77,23 +62,24 @@ main>.photos {
 	justify-content: center;
 	align-items: center;
 	margin-top: 2em;
-
 }
 
 .container-photo-text {
 	font-size: 32px;
 }
 
-
-
-
 .side-info {
+	grid-area: side-info;
 	display: flex;
 	flex-direction: column;
-	border: 1px solid black;
 	flex: 1;
 	min-width: 300px;
 	text-align: center;
+	justify-content: space-around;
+}
+
+.side-info hr {
+	max-width: 100%;
 }
 
 .price {
@@ -110,13 +96,12 @@ main>.photos {
 	justify-content: flex-start;
 }
 
+.info>h3 {
+	margin-top: 1em;
+}
 
-
-
-.info {
-	grid-area: product-info;
-	margin-left: 1em;
-
+.info>p {
+	margin-bottom: 1em;
 }
 
 .info>u:hover {
@@ -153,17 +138,14 @@ main>.photos {
 	background-color: #B38A8A;
 }
 
-
-
 .button {
 	grid-area: button;
 	justify-self: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15em;
-	height: 3em;
-
+	width: 20em;
+	height: 4em;
 	background-image: linear-gradient(to left, #7230FF 0%, #F95CBA 100%);
 	opacity: 0.8;
 	border-style: none;
@@ -172,11 +154,11 @@ main>.photos {
 	box-shadow: 0 0 20px #838282;
 }
 
-
-
 .button>a {
 	color: white;
 	text-decoration: none;
+	font-size: 1.5em;
+	font-family: 'Inter', sans-serif;
 }
 
 .specification {
@@ -200,17 +182,14 @@ summary {
 	margin: 1em;
 }
 
-
 @media screen and (min-width: 700px) and (max-width: 900px) {
 	main {
 		display: grid;
 		grid-template-columns: 0.5fr 1fr 3fr 0.5fr;
-		grid-template-rows: 2fr 0.3fr 0.5fr 1fr 1fr minmax(0.5fr, 3fr);
+		grid-template-rows: 2fr 1fr 1fr minmax(0.5fr, 3fr);
 		grid-template-areas:
 			". product-small product-big ."
-			". price price ."
-			". colors colors ."
-			". product-info product-info ."
+			". side-info side-info ."
 			". button button ."
 			". specification specification .";
 	}
@@ -222,9 +201,9 @@ summary {
 
 	}
 
-	/* .color-circles {
-		flex-direction: column;
-	} */
+	.info p {
+		font-size: 1.2em;
+	}
 }
 
 @media screen and (min-width: 901px) {
@@ -233,14 +212,13 @@ summary {
 		grid-template-columns: 0.5fr 0.5fr 1.5fr 1fr 0.5fr;
 		grid-template-rows: 1fr 0.5fr 1fr 1fr minmax(0.5fr, 3fr);
 		grid-template-areas:
-			". product-small product-big price ."
-			". product-small product-big colors ."
-			". product-small product-big product-info ."
+			". product-small product-big . ."
+			". product-small product-big side-info ."
+			". product-small product-big side-info ."
 			". product-small product-big  button ."
 			". . specification specification .";
 		gap: 1em;
 	}
-
 
 	main>.photos {
 		flex-direction: column;
@@ -249,9 +227,8 @@ summary {
 
 	}
 
-	.price {
-		align-self: flex-end;
-
+	.info p {
+		font-size: 1.2em;
 	}
 
 	.button:hover {

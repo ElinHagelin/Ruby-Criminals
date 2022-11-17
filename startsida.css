@@ -126,6 +126,7 @@ header {
 	border-radius: 3em;
 	transition: 0.5s;
 	box-shadow: 0 0 20px #838282;
+	font-family: 'Inter', sans-serif;
 }
 
 a {
@@ -135,10 +136,6 @@ a {
 
 .button-outside {
 	visibility: hidden;
-}
-
-button {
-	font-family: 'Inter', sans-serif;
 }
 
 footer {
