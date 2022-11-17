@@ -28,14 +28,15 @@ footer {
 main {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 2fr 1fr 0.5fr 0.5fr 1fr 1fr;
+	grid-template-rows: 2fr 1fr 0.5fr 0.5fr 1fr 1fr minmax(0.5fr, 3fr);
 	grid-template-areas:
 		"product-big"
 		"product-small"
 		"price"
 		"colors"
 		"product-info"
-		"button";
+		"button"
+		"specification";
 }
 
 /* main {
@@ -178,21 +179,40 @@ main>.photos {
 	text-decoration: none;
 }
 
+.specification {
+	grid-area: specification;
+	margin: 2em;
+	max-width: 50em;
+}
 
+.specification>div {
+	display: flex;
+	justify-content: space-between;
+}
 
+summary {
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+.specification p {
+	font-size: 1.2em;
+	margin: 1em;
+}
 
 
 @media screen and (min-width: 700px) and (max-width: 900px) {
 	main {
 		display: grid;
 		grid-template-columns: 0.5fr 1fr 3fr 0.5fr;
-		grid-template-rows: 2fr 0.3fr 0.5fr 1fr 1fr;
+		grid-template-rows: 2fr 0.3fr 0.5fr 1fr 1fr minmax(0.5fr, 3fr);
 		grid-template-areas:
 			". product-small product-big ."
 			". price price ."
 			". colors colors ."
 			". product-info product-info ."
-			". button button .";
+			". button button ."
+			". specification specification .";
 	}
 
 	main>.photos {
@@ -211,12 +231,13 @@ main>.photos {
 	main {
 		display: grid;
 		grid-template-columns: 0.5fr 0.5fr 1.5fr 1fr 0.5fr;
-		grid-template-rows: 1fr 0.5fr 1fr 1fr;
+		grid-template-rows: 1fr 0.5fr 1fr 1fr minmax(0.5fr, 3fr);
 		grid-template-areas:
 			". product-small product-big price ."
 			". product-small product-big colors ."
 			". product-small product-big product-info ."
-			". product-small product-big  button .";
+			". product-small product-big  button ."
+			". . specification specification .";
 		gap: 1em;
 	}
 
