@@ -91,6 +91,7 @@ main {
     grid-area: item-description;
     font-size: 22px;
     margin-top: 1em;
+    margin-left: 1em;
     
 }
 .item-description> img{
@@ -138,13 +139,10 @@ a {
     border-radius: 3em;
     transition: background 1s ease-in;
     box-shadow: 0 0 20px #838282;
+    font-family: 'inter', sans-serif;
 }
 
-.button:hover {
-    transition: 0.5s;
-    background-position: right center;
-    background: linear-gradient(to left, #7230FF 100%, #F95CBA 0%);
-}
+
  
 .button>p {
     font-size: 1.2em;
@@ -176,6 +174,7 @@ a {
 
     .item-description{
         margin-top: 1em;
+        margin-left: 0;
     }
 
 }
@@ -199,12 +198,19 @@ a {
     .item-description{
         align-self: flex-end;
         margin-top: 1em;
+        margin-left: 0;
  
     }
     .item-description> img{
         width: 150px;
         height: 100px;
         margin-top: 1em;
+    }
+
+    .button:hover {
+        transition: 0.5s;
+        background-position: right center;
+        background: linear-gradient(to left, #7230FF 100%, #F95CBA 0%);
     }
 }
 

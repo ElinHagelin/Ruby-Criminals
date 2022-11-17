@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./betalning.css">
+    <link rel="stylesheet" href="./betalning-2.css">
     <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="/header.css">
 
@@ -19,38 +19,53 @@
 
 
     <header>
-        <section class="header">
-            <img src="header-bilder/handprint-logga.png" class="icon">
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="12" fill="currentColor" class="bi bi-list"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-            </svg>
+		<nav role="navigation">
+			<div id="menuToggle">
+				<input type="checkbox" />
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul id="menu">
+					<a href="startsida.html">
+						<li>Startsidan</li>
+					</a>
+					<a href="#">
+						<li>Produkt</li>
+					</a>
+					<a href="om-oss.html">
+						<li>Om Oss</li>
+					</a>
+					<a href="#">
+						<li>Kontakt</li>
+					</a>
+				</ul>
+			</div>
+		</nav>
 
-
-
-
-            <div class="outer">
-                <div class="flex-item item1">Om oss </div>
-                <div class="flex-item item2">Produkt</div>
-                <div class="flex-item item3">Kontakt</div>
-                <img src="header-bilder/cart3.svg" class="cart-icon">
-
-            </div>
-
-            <img src="header-bilder/handprint-logga.png" class="icon-mobile">
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="" fill="currentColor" class="bi bi-cart3"
-                viewBox="0 0 16 16">
-                <path
-                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-            </svg>
-
+		<a href="/startsida.html" class="icon"><img src="/header-bilder/handprint-logga.png">
+		</a>
 
 
-        </section>
-    </header>
+		<div class="outer">
+			<div class="item1"><a href="om-oss.html" class="flex-item">Om oss</a></div>
+			<div class="item2"><a href="" class="flex-item">Produkt</a></div>
+			<div class="item3"><a href="" class="flex-item">Kontakt</a></div>
+			<img src="/header-bilder/cart3.svg" class="cart-icon">
+
+		</div>
+
+		<img src="/header-bilder/handprint-logga.png" class="icon-mobile">
+
+		<svg xmlns="http://www.w3.org/2000/svg" width="35" height="" fill="currentColor" class="bi bi-cart3"
+			viewBox="0 0 16 16">
+			<path
+				d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+		</svg>
+
+
+
+	</header>
 
 
 
@@ -70,7 +85,7 @@
                 <input type="text" placeholder="Stenvägen 5" name="lname"><br><br>
 
 
-                <input type="text" placeholder="John. Smith@gmail.com" name="lname"><br><br>
+                <input type="text" placeholder="John.Smith@gmail.com" name="lname"><br><br>
 
 
                 <input type="text" placeholder="070568890 " name="lname"><br><br>
@@ -85,7 +100,7 @@
                 <img src="./img/klarna-og.png" alt="klarna">
                 <img src="./img/sqyrhijdylqrsgwbrbtm.jpg" alt="">
                 <img src="./img/FNHpEg8WQAIezUV.jpg" alt="">
-                <img src="./img/swish.jpg" alt="">
+                <img src="./img/Swish logo(1) (1).jpg" alt="">
 
             </div>
 
@@ -151,9 +166,9 @@
                 <hr>
             </div>
             <div class="icons">
-                <img src="image/Instagram logg.png" alt="Instagram">
-                <img src="image/Facebook logga.png" alt="Facebook">
-                <img src="image/Twitter logga.png" alt="Twitter">
+                <img src="/image/Instagram logg.png" alt="Instagram">
+                <img src="/image/Facebook logga.png" alt="Facebook">
+                <img src="/image/Twitter logga.png" alt="Twitter">
             </div>
         </div>
 
