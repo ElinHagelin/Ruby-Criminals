@@ -240,7 +240,7 @@ footer {
 
 	button:hover {
 		background-position: right center;
-		background-image: linear-gradient(to right, #7230FF 0%, #F95CBA 100%);
+		background-image: linear-gradient(to right, #7230FF 100%, #F95CBA 0%);
 	}
 }
 
@@ -316,6 +316,6 @@ footer {
 
 	button:hover {
 		background-position: right center;
-		background-image: linear-gradient(to right, #7230FF 0%, #F95CBA 100%);
+		background-image: linear-gradient(to right, #7230FF 100%, #F95CBA 0%);
 	}
 }
