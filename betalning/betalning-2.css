@@ -16,12 +16,10 @@ body {
 
 header {
     grid-area: header;
-
 }
 
 footer {
     grid-area: footer;
-
 }
 
 main {
@@ -34,17 +32,6 @@ main {
         "item-description"
         "button";
 }
-
-/* main {
- 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-} */
-
-
-
-
 
 .container-1>form>* {
     border: 2px solid black;
@@ -65,21 +52,15 @@ main {
     justify-self: center;
 }
 
-
 .container-1 {
     grid-area: container-1;
     display: flex;
     flex-direction: column;
-    /* flex-grow: 1; */
     min-width: 300px;
     text-align: center;
     margin-top: 1em;
     align-self: center;
-
-
-
 }
-
 
 .side-info {
     display: flex;
@@ -129,23 +110,19 @@ main {
     font-size: 0.8em;
 }
 
-
 .info {
     grid-area: product-info;
     margin-left: 1em;
     text-align: center;
 }
 
-
-
-.button>a {
+button>a {
     color: white;
     text-decoration: none;
     font-size: 1.5em;
 }
 
-
-.button {
+button {
     grid-area: button;
     justify-self: center;
     align-self: center;
@@ -162,7 +139,6 @@ main {
     box-shadow: 0 0 20px #838282;
     font-family: 'inter', sans-serif;
 }
-
 
 @media screen and (min-width: 700px) and (max-width: 900px) {
     main {
@@ -185,7 +161,6 @@ main {
         margin-top: 1em;
         margin-left: 0;
     }
-
 }
 
 @media screen and (min-width: 901px) {
@@ -201,7 +176,6 @@ main {
             ". . . .";
         gap: 1em;
     }
-
 
     .item-description,
     .container-1 {
@@ -228,7 +202,7 @@ main {
         font-size: 1em;
     }
 
-    .button:hover {
+    button:hover {
         transition: 0.5s;
         background-position: right center;
         background: linear-gradient(to left, #7230FF 100%, #F95CBA 0%);

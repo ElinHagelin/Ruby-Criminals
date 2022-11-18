@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'urbanist' sans-serif;
+	font-family: 'Urbanist', sans-serif;
 }
 
 body {
@@ -56,7 +56,6 @@ main>.photos {
 	grid-area: product-big;
 	display: flex;
 	flex-direction: column;
-	/* flex-grow: 1; */
 	min-width: 300px;
 	text-align: center;
 	justify-content: center;
