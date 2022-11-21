@@ -104,13 +104,35 @@ h2 {
 .company {
     display: flex;
     margin-bottom: 4em;
+    flex-direction: column;
 }
 
 .about-us {
     display: flex;
-    flex-direction: column;
     font-size: 19px;
     justify-content: space-around;
+}
+
+.employee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.employee>div {
+    display: flex;
+    flex-direction: column;
+    max-width: 16em;
+    margin: 1em 0em;
+
+}
+
+
+.employee>img {
+    width: 130px;
+    margin-left: 2em;
 }
 
 .photos {
@@ -153,7 +175,7 @@ footer hr {
     display: block;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 568px) {
     .grid-container {
         flex-direction: column;
         flex-wrap: unset;
@@ -166,9 +188,14 @@ footer hr {
     .text {
         text-align: center;
     }
+
+    .employee {
+        flex-direction: column;
+
+    }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 740px) and (min-width: 569px) {
     .btn {
 
         background-image: linear-gradient(to left, #7230FF 0%, #F95CBA 100%);
