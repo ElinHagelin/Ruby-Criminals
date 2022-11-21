@@ -111,7 +111,8 @@ header>img {
   } */
 
   .icon-mobile {
-    display: block
+    display: block;
+    height: 4em;
   }
 
   .hamburger-menu {
